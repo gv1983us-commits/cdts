@@ -1,0 +1,93 @@
+{
+  "cdts_version": "0.1-draft",
+  "trace_id": "cdts-test-001",
+  "trace_revision": 1,
+  "trace_scope": {
+    "scope_id": "scope-test-001",
+    "correlation_subject": "municipal-notification-operation",
+    "summary": "Records correlated around a bounded infrastructure operation.",
+    "observed_from": "2026-01-01T00:00:00Z",
+    "observed_to": "2026-01-01T00:10:00Z",
+    "scope_status": "correlation_scope"
+  },
+  "source_revisions": [
+    {
+      "owner": "MPAA",
+      "repository": "https://github.com/gv1983us-commits/mpaa",
+      "revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "role": "normative_source"
+    },
+    {
+      "owner": "BEC",
+      "repository": "https://github.com/gv1983us-commits/behavioral-execution-contract",
+      "revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "role": "normative_source"
+    },
+    {
+      "owner": "REVIEW_PROTOCOL",
+      "repository": "https://github.com/gv1983us-commits/repository-canon-review-protocol",
+      "revision": "595c08b877e4dfb14593454c2eec7c8f5df46c28",
+      "role": "source_policy"
+    }
+  ],
+  "record_refs": [
+    {
+      "ref_id": "ref-mpaa-1",
+      "owner": "MPAA",
+      "specification_revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "record_type": "runtime_report",
+      "record_id": "owner-local-1",
+      "location": "https://records.example.invalid/mpaa/owner-local-1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "recorded_at": "2026-01-01T00:04:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    },
+    {
+      "ref_id": "ref-bec-1",
+      "owner": "BEC",
+      "specification_revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "record_type": "execution_record",
+      "record_id": "owner-local-1",
+      "location": "https://records.example.invalid/bec/owner-local-1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "recorded_at": "2026-01-01T00:05:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    }
+  ],
+  "absences": [
+    {
+      "absence_id": "absence-pca-1",
+      "owner": "PCA",
+      "record_type": "transition_record",
+      "state": "not_applicable",
+      "reason": "No process-continuity claim is in this correlation scope."
+    }
+  ],
+  "linkage_assertions": [
+    {
+      "linkage_id": "link-1",
+      "from_ref": "ref-mpaa-1",
+      "to_ref": "ref-bec-1",
+      "relationship": "cdts.correlates",
+      "direction": "undirected",
+      "basis": "cdts.explicit_reference",
+      "evidence_refs": [],
+      "assertion_status": "cdts.declared",
+      "asserted_by": "urn:example:producer:trace-builder",
+      "asserted_at": "2026-01-01T00:11:00Z"
+    }
+  ],
+  "conflicts": [],
+  "unresolved": [],
+  "provenance": {
+    "produced_by": "urn:example:producer:trace-builder",
+    "produced_at": "2026-01-01T00:12:00Z",
+    "producer_role": "coordination_layer",
+    "notes": []
+  },
+  "amendments": []
+}

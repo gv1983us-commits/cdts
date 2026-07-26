@@ -1,0 +1,99 @@
+{
+  "cdts_version": "0.1-draft",
+  "trace_id": "cdts-example-host-transition",
+  "trace_revision": 1,
+  "trace_scope": {
+    "scope_id": "scope-host-transition",
+    "correlation_subject": "notification-service-host-transition",
+    "summary": "References correlated around a notification queue host transition.",
+    "observed_from": "2026-01-01T00:00:00Z",
+    "observed_to": "2026-01-01T00:10:00Z",
+    "scope_status": "correlation_scope"
+  },
+  "source_revisions": [
+    {
+      "owner": "MPAA",
+      "repository": "https://github.com/gv1983us-commits/mpaa",
+      "revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "role": "normative_source"
+    },
+    {
+      "owner": "PCA",
+      "repository": "https://github.com/gv1983us-commits/pca",
+      "revision": "6ad1a86d7c09b36839d162c580f84f05cfe4a598",
+      "role": "normative_source"
+    },
+    {
+      "owner": "REVIEW_PROTOCOL",
+      "repository": "https://github.com/gv1983us-commits/repository-canon-review-protocol",
+      "revision": "595c08b877e4dfb14593454c2eec7c8f5df46c28",
+      "role": "source_policy"
+    },
+    {
+      "owner": "ARB",
+      "repository": "https://github.com/gv1983us-commits/agent-runtime-boundaries",
+      "revision": "6b6c32cd467a4b5e4863d082b9da5bdd40d7dced",
+      "role": "analytical_mapping"
+    }
+  ],
+  "record_refs": [
+    {
+      "ref_id": "ref-mpaa-1",
+      "owner": "MPAA",
+      "specification_revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "record_type": "runtime_report",
+      "record_id": "runtime-report-1",
+      "location": "https://records.example.invalid/mpaa/runtime-report-1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "recorded_at": "2026-01-01T00:04:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    },
+    {
+      "ref_id": "ref-pca-1",
+      "owner": "PCA",
+      "specification_revision": "6ad1a86d7c09b36839d162c580f84f05cfe4a598",
+      "record_type": "transition_record",
+      "record_id": "transition-record-1",
+      "location": "https://records.example.invalid/pca/transition-record-1",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "recorded_at": "2026-01-01T00:08:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    }
+  ],
+  "absences": [
+    {
+      "absence_id": "absence-bec-1",
+      "owner": "BEC",
+      "record_type": "execution_record",
+      "state": "not_applicable",
+      "reason": "No execution acceptance is in this correlation scope."
+    }
+  ],
+  "linkage_assertions": [
+    {
+      "linkage_id": "link-1",
+      "from_ref": "ref-mpaa-1",
+      "to_ref": "ref-pca-1",
+      "relationship": "cdts.has_transition_record",
+      "direction": "directed",
+      "basis": "cdts.explicit_reference",
+      "evidence_refs": [],
+      "assertion_status": "cdts.declared",
+      "asserted_by": "urn:example:producer:trace-builder",
+      "asserted_at": "2026-01-01T00:11:00Z"
+    }
+  ],
+  "conflicts": [],
+  "unresolved": [],
+  "provenance": {
+    "produced_by": "urn:example:producer:trace-builder",
+    "produced_at": "2026-01-01T00:12:00Z",
+    "producer_role": "coordination_layer",
+    "notes": []
+  },
+  "amendments": []
+}
