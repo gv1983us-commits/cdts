@@ -103,7 +103,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_github_actions_are_pinned_by_commit(self):
         workflow = (ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
-        uses = re.findall(r"^\s*-\s+uses:\s+([^\s#]+)", workflow, flags=re.MULTILINE)
+        uses = re.findall(r"^\s*(?:-\s+)?uses:\s+([^\s#]+)", workflow, flags=re.MULTILINE)
         self.assertGreater(len(uses), 0)
         for action in uses:
             with self.subTest(action=action):

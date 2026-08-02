@@ -1,5 +1,7 @@
 # Cross-Domain Trace Set (CDTS)
 
+[![CDTS checks](https://github.com/gv1983us-commits/cdts/actions/workflows/ci.yml/badge.svg)](https://github.com/gv1983us-commits/cdts/actions/workflows/ci.yml)
+
 **Status:** v0.1-draft, exploratory public draft.
 
 CDTS is a portable correlation trace for addressable records owned by independent specifications. It records a bounded correlation scope, fixed source revisions, qualified external references, CDTS-owned linkage assertions, typed absence, disclosed conflict, unresolved questions, provenance, and amendment history.
@@ -16,6 +18,8 @@ python -m unittest discover -v
 ```
 
 The validator uses only the Python standard library. An `ADMISSIBLE` result establishes machine-checkable structural conformance, local reference integrity, fixed-source consistency, and CDTS boundary checks. It does not semantically classify free text or establish external completeness, identity, authenticity, or truth. It reports `world_truth` as `NOT_EVALUATED`.
+
+GitHub Actions compiles the validator and publication checker, runs the complete regression and Draft 2020-12 parity suites, repeats the publication checks explicitly, and validates the canonical example on Python 3.10, 3.11, 3.12, and 3.13. The `jsonschema` package is used only as a CI test oracle; the reference validator remains standard-library-only.
 
 ## Documents
 
