@@ -1,0 +1,159 @@
+{
+  "cdts_version": "0.1-draft",
+  "trace_id": "cdts-external-evaluation-run-001",
+  "trace_revision": 1,
+  "trace_scope": {
+    "scope_id": "scope-external-evaluation-run-001",
+    "correlation_subject": "jarvis-os-2.0.1-external-evaluation",
+    "summary": "Correlates one MPAA Runtime Report and one BEC acceptance-run record around donor artifact sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. The digest defines correlation scope only; it does not prove donor authenticity, redaction, or completeness.",
+    "observed_from": "2026-08-03T03:00:00Z",
+    "observed_to": "2026-08-03T03:10:00Z",
+    "scope_status": "correlation_scope"
+  },
+  "source_revisions": [
+    {
+      "owner": "MPAA",
+      "repository": "https://github.com/gv1983us-commits/mpaa",
+      "revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "role": "normative_source"
+    },
+    {
+      "owner": "BEC",
+      "repository": "https://github.com/gv1983us-commits/behavioral-execution-contract",
+      "revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "role": "normative_source"
+    },
+    {
+      "owner": "REVIEW_PROTOCOL",
+      "repository": "https://github.com/gv1983us-commits/repository-canon-review-protocol",
+      "revision": "595c08b877e4dfb14593454c2eec7c8f5df46c28",
+      "role": "source_policy"
+    }
+  ],
+  "record_refs": [
+    {
+      "ref_id": "ref-mpaa-runtime-report-001",
+      "owner": "MPAA",
+      "specification_revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "record_type": "runtime_report",
+      "record_id": "external-run-001-runtime-report",
+      "location": "https://records.example.invalid/external-run-001/runtime-report.json",
+      "digest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "recorded_at": "2026-08-03T03:08:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    },
+    {
+      "ref_id": "ref-bec-acceptance-record-001",
+      "owner": "BEC",
+      "specification_revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "record_type": "execution_record",
+      "record_id": "external-run-001-acceptance-evidence",
+      "location": "https://records.example.invalid/external-run-001/bec-acceptance-record.json",
+      "digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "recorded_at": "2026-08-03T03:09:00Z",
+      "link_direction": "external_to_cdts",
+      "non_import_boundary": "trace_reference_only",
+      "conclusion_imported": false
+    }
+  ],
+  "absences": [
+    {
+      "absence_id": "absence-pca-transition-001",
+      "owner": "PCA",
+      "record_type": "transition_record",
+      "state": "not_applicable",
+      "reason": "This black-box evaluation trace makes no process-continuation claim across runtime transitions."
+    }
+  ],
+  "linkage_assertions": [
+    {
+      "linkage_id": "link-shared-donor-scope-001",
+      "from_ref": "ref-mpaa-runtime-report-001",
+      "to_ref": "ref-bec-acceptance-record-001",
+      "relationship": "cdts.correlates",
+      "direction": "undirected",
+      "basis": "cdts.shared_receipt",
+      "evidence_refs": [
+        "ref-mpaa-runtime-report-001",
+        "ref-bec-acceptance-record-001"
+      ],
+      "assertion_status": "cdts.declared",
+      "asserted_by": "urn:example:producer:external-evaluation-trace-builder",
+      "asserted_at": "2026-08-03T03:11:00Z"
+    },
+    {
+      "linkage_id": "link-mpaa-does-not-establish-bec-001",
+      "from_ref": "ref-mpaa-runtime-report-001",
+      "to_ref": "ref-bec-acceptance-record-001",
+      "relationship": "cdts.does_not_imply",
+      "direction": "directed",
+      "basis": "cdts.explicit_reference",
+      "evidence_refs": [],
+      "assertion_status": "cdts.declared",
+      "asserted_by": "urn:example:producer:external-evaluation-trace-builder",
+      "asserted_at": "2026-08-03T03:11:00Z"
+    },
+    {
+      "linkage_id": "link-bec-does-not-certify-donor-001",
+      "from_ref": "ref-bec-acceptance-record-001",
+      "to_ref": "ref-mpaa-runtime-report-001",
+      "relationship": "cdts.does_not_imply",
+      "direction": "directed",
+      "basis": "cdts.explicit_reference",
+      "evidence_refs": [],
+      "assertion_status": "cdts.declared",
+      "asserted_by": "urn:example:producer:external-evaluation-trace-builder",
+      "asserted_at": "2026-08-03T03:11:00Z"
+    }
+  ],
+  "conflicts": [],
+  "unresolved": [
+    {
+      "unresolved_id": "unresolved-donor-redaction-001",
+      "question": "Does the donor-package review receipt establish bounded evidence that private identity, memory, Heart, canon, secrets, and home-workspace material were excluded?",
+      "status": "open",
+      "required_evidence": [
+        "A fixed-revision donor source and redaction review receipt with declared checked, not-checked, not-applicable, and unknown surfaces."
+      ],
+      "linkage_refs": [
+        "link-shared-donor-scope-001"
+      ]
+    },
+    {
+      "unresolved_id": "unresolved-evaluator-provenance-001",
+      "question": "Are the evaluator runtime, model family, provider, and host provenance declarations authentic and independent of the donor producer?",
+      "status": "undetermined",
+      "required_evidence": [
+        "External provenance review or independently addressable evaluator receipt."
+      ],
+      "linkage_refs": [
+        "link-shared-donor-scope-001"
+      ]
+    },
+    {
+      "unresolved_id": "unresolved-world-effect-001",
+      "question": "Do the execution log and acceptance receipts establish the claimed effects in the external world beyond local record consistency?",
+      "status": "undetermined",
+      "required_evidence": [
+        "Replay, refetch, signature, or another domain-owned external verification appropriate to each claimed effect."
+      ],
+      "linkage_refs": [
+        "link-bec-does-not-certify-donor-001"
+      ]
+    }
+  ],
+  "provenance": {
+    "produced_by": "urn:example:producer:external-evaluation-trace-builder",
+    "produced_at": "2026-08-03T03:12:00Z",
+    "producer_role": "coordination_layer",
+    "notes": [
+      "The donor SHA-256 appears only as a correlation key and is not a CDTS authenticity or redaction verdict.",
+      "MPAA and BEC records remain authoritative only in their own claim domains.",
+      "The run is an independent evaluation of one implementation, not an independent implementation.",
+      "world_truth remains NOT_EVALUATED."
+    ]
+  },
+  "amendments": []
+}
