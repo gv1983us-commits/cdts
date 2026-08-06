@@ -29,20 +29,17 @@ jobs:
       - name: Install test-only schema oracle
         run: python -m pip install "jsonschema>=4.20,<5"
 
+      - name: Validate machine passport
+        run: python -m json.tool ARTIFACT.json >/dev/null
+
       - name: Compile validator and checks
-        run: >-
-          python -m py_compile
-          validator/cdts_validate.py
-          validator/test_validator.py
-          validator/test_external_evaluation_trace.py
-          validator/test_schema_parity.py
-          review/test_publication.py
+        run: python -m compileall -q validator review
 
       - name: Run complete test suite
         run: python -m unittest discover -v
 
-      - name: Run publication checks explicitly
-        run: python -m review.test_publication
+      - name: Run artifact canon explicitly
+        run: python -m review.test_artifact_canon
 
       - name: Validate canonical example
         run: python validator/cdts_validate.py examples/mpaa-bec-execution.json
