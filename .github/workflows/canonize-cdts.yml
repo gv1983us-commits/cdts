@@ -39,8 +39,10 @@ jobs:
           python -m unittest discover -v
           python validator/cdts_validate.py examples/mpaa-bec-execution.json
 
-      - name: Remove one-time migration
-        run: rm tools/canonize_cdts.py tools/fix_canonize_cdts.py .github/workflows/canonize-cdts.yml
+      - name: Prepare pushable canonical state
+        run: |
+          rm tools/canonize_cdts.py tools/fix_canonize_cdts.py
+          git restore .github/workflows/ci.yml
 
       - name: Commit canonical state
         run: |
