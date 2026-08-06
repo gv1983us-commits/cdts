@@ -1,9 +1,23 @@
 # CDTS Contributor Instructions
 
-Build and review this repository as a neutral public specification candidate. Use only the fixed public revisions listed in `references/PINNED_SPEC_REVISIONS.md`; never silently mix revisions.
+Read in this order:
 
-Preserve ownership boundaries: external specifications own their records and conclusions; ARB is analytical only; Review Protocol owns source policy only; CDTS owns correlation trace structure and its own linkage assertions. Import the trace, not the conclusion.
+1. `CANON.md`
+2. `ARTIFACT.json`
+3. the five normative surfaces
+4. `RELATIONS.md`
+5. `PROVENANCE.md`
+6. the compatibility receipt
+7. validator, examples, fixtures, and review tests
 
-Use strict RED-GREEN-REFACTOR for validator changes, standard-library Python, strict JSON parsing, schema/validator parity tests, and fail-closed validation. Public files must contain neutral infrastructure material only and no local paths, credentials, private links, private names, or internal correspondence.
+Preserve the five-surface domain-ownership matrix. Do not make the validator, fixtures, examples, compatibility receipt, publication checker, or House representation a sixth normative surface.
 
-Do not publish from an automated work session. Leave changes for human review.
+Preserve external ownership boundaries: MPAA, BEC, and PCA own their records and conclusions; Review Protocol owns review discipline; ARB is analytical only; CDTS owns trace structure, its namespaced linkage assertions, and CDTS admissibility.
+
+Use exact fixed revisions. Never rewrite historical review logs as though they inspected later commits. A new compatibility set requires an explicit review and a new artifact revision.
+
+Use strict RED-GREEN-REFACTOR for validator changes, standard-library Python in the reference implementation, strict JSON parsing, schema/validator parity tests, and fail-closed handling of unsupported normative schema assertions.
+
+Public files must contain neutral infrastructure material and no credentials, private share links, local paths, or secret-bearing data.
+
+Publication requires explicit human authorization. The current canonization is authorized by the repository authority through the active project session; future automation must not infer standing publication authority from this event.

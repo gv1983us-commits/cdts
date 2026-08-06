@@ -67,7 +67,7 @@ class SchemaParityTests(unittest.TestCase):
                     load_schema(schema)
 
     def test_schema_id_and_version_are_canonical(self):
-        self.assertEqual("https://example.org/cdts/schema/cdts-record.schema.json", self.schema["$id"])
+        self.assertEqual("https://raw.githubusercontent.com/gv1983us-commits/cdts/main/schema/cdts-record.schema.json", self.schema["$id"])
         self.assertEqual("https://json-schema.org/draft/2020-12/schema", self.schema["$schema"])
         self.assertEqual("0.1-draft", self.schema["properties"]["cdts_version"]["const"])
 

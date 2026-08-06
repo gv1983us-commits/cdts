@@ -23,11 +23,11 @@ ASSERTION_STATUSES = ("cdts.observed", "cdts.declared", "cdts.derived", "cdts.hy
 BASES = ("cdts.explicit_reference", "cdts.content_digest", "cdts.timestamp_order", "cdts.shared_receipt", "cdts.insufficient")
 ABSENCE_STATES = ("not_applicable", "not_observed", "not_produced", "unavailable", "undetermined")
 PINNED_SOURCES = {
-    "MPAA": ("https://github.com/gv1983us-commits/mpaa", "1d369f6cd091b99f9492cfaf730f0a170b55106e", "normative_source"),
-    "BEC": ("https://github.com/gv1983us-commits/behavioral-execution-contract", "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af", "normative_source"),
-    "PCA": ("https://github.com/gv1983us-commits/pca", "6ad1a86d7c09b36839d162c580f84f05cfe4a598", "normative_source"),
-    "REVIEW_PROTOCOL": ("https://github.com/gv1983us-commits/repository-canon-review-protocol", "595c08b877e4dfb14593454c2eec7c8f5df46c28", "source_policy"),
-    "ARB": ("https://github.com/gv1983us-commits/agent-runtime-boundaries", "6b6c32cd467a4b5e4863d082b9da5bdd40d7dced", "analytical_mapping"),
+    "MPAA": ("https://github.com/gv1983us-commits/mpaa", "0d1aaf35cc4826622f3312fdd2a1c2d40890b965", "normative_source"),
+    "BEC": ("https://github.com/gv1983us-commits/behavioral-execution-contract", "62f2b7940b5ca7a4a8b24150b9c45a6ab5d97261", "normative_source"),
+    "PCA": ("https://github.com/gv1983us-commits/pca", "a669f023198615ad929f42df84f19380b57ca5ea", "normative_source"),
+    "REVIEW_PROTOCOL": ("https://github.com/gv1983us-commits/repository-canon-review-protocol", "b4205ffd91a6316ab40243cbf8161a1c512cae1f", "source_policy"),
+    "ARB": ("https://github.com/gv1983us-commits/agent-runtime-boundaries", "bcf9f628ee1d7c2075673b00f660674680bb6f62", "analytical_mapping"),
 }
 SCHEMA_PATH = Path(__file__).resolve().parents[1] / "schema" / "cdts-record.schema.json"
 SUPPORTED_SCHEMA_KEYWORDS = {

@@ -14,19 +14,19 @@
     {
       "owner": "MPAA",
       "repository": "https://github.com/gv1983us-commits/mpaa",
-      "revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "revision": "0d1aaf35cc4826622f3312fdd2a1c2d40890b965",
       "role": "normative_source"
     },
     {
       "owner": "BEC",
       "repository": "https://github.com/gv1983us-commits/behavioral-execution-contract",
-      "revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "revision": "62f2b7940b5ca7a4a8b24150b9c45a6ab5d97261",
       "role": "normative_source"
     },
     {
       "owner": "REVIEW_PROTOCOL",
       "repository": "https://github.com/gv1983us-commits/repository-canon-review-protocol",
-      "revision": "595c08b877e4dfb14593454c2eec7c8f5df46c28",
+      "revision": "b4205ffd91a6316ab40243cbf8161a1c512cae1f",
       "role": "source_policy"
     }
   ],
@@ -34,7 +34,7 @@
     {
       "ref_id": "ref-mpaa-1",
       "owner": "MPAA",
-      "specification_revision": "1d369f6cd091b99f9492cfaf730f0a170b55106e",
+      "specification_revision": "0d1aaf35cc4826622f3312fdd2a1c2d40890b965",
       "record_type": "runtime_report",
       "record_id": "owner-local-1",
       "location": "https://records.example.invalid/mpaa/owner-local-1",
@@ -47,7 +47,7 @@
     {
       "ref_id": "ref-bec-1",
       "owner": "BEC",
-      "specification_revision": "bb46f5f8aac96d1cffba7a334c5d17fb331ef3af",
+      "specification_revision": "62f2b7940b5ca7a4a8b24150b9c45a6ab5d97261",
       "record_type": "execution_record",
       "record_id": "owner-local-1",
       "location": "https://records.example.invalid/bec/owner-local-1",

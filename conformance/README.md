@@ -1,5 +1,10 @@
-# Conformance Corpus
+# CDTS Conformance Corpus
 
-Fixture names encode expectation: `valid-*`, `invalid-*`, and `malformed-*`. The corpus covers positive correlation, typed absence, unresolved relation, disclosed conflict, amendment history, full fixed-source coverage, dangling/self references, source and role mismatch, forbidden causal vocabulary, imported conclusions, conflict policy, incomplete unresolved state, unknown tokens, duplicate keys, and non-finite numbers.
+This directory provides executable evidence for record profile `0.1-draft` under artifact version `0.2-draft`.
 
-Run `python -m unittest discover -v`. A third-party implementation should produce the same admissibility class or failure for every fixture before claiming v0.1 compatibility.
+- `fixtures/valid-*.json` must produce an admissible or qualified-admissible result.
+- `fixtures/invalid-*.json` must produce `INVALID`.
+- `fixtures/malformed-*.json` must fail strict parsing.
+- `RESISTANCE_CORPUS.md` explains the overclaim classes resisted by the fixtures.
+
+The corpus is not a normative sixth surface and does not establish multi-implementation conformance, external record validity, or world truth.
