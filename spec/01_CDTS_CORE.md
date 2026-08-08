@@ -1,7 +1,7 @@
-# CDTS Core - Trace Profile v0.1-draft
+# CDTS Core - Trace Profile v0.1
 
 **Status:** normative
-**Artifact version:** `0.2-draft`
+**Artifact version:** `0.2`
 **Normative domain:** trace semantics, ownership boundaries, and admissibility requirements
 
 This document is one of five normative CDTS surfaces. It does not own token definitions, exact compatibility values, result exit codes, or JSON representation when those domains are assigned to another surface by `CANON.md`.

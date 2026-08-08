@@ -1,7 +1,7 @@
 # CDTS Source Revision Policy
 
 **Status:** normative
-**Artifact version:** `0.2-draft`
+**Artifact version:** `0.2`
 **Normative domain:** owner, role, exact-pin, record-reference parity, and compatibility-set change rules
 
 A branch is a moving target; a 40-character commit revision is a fixed review object.

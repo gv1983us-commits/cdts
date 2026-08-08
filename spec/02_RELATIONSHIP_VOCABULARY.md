@@ -1,7 +1,7 @@
 # CDTS Relationship Vocabulary - Profile v0.1
 
 **Status:** normative
-**Artifact version:** `0.2-draft`
+**Artifact version:** `0.2`
 **Normative domain:** meanings of CDTS-namespaced relationship, assertion-status, and basis tokens
 
 All tokens describe CDTS trace structure or qualified relation. They are not native domain conclusions.

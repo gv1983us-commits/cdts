@@ -1,7 +1,7 @@
 # CDTS Conformance - Profile v0.1
 
 **Status:** normative
-**Artifact version:** `0.2-draft`
+**Artifact version:** `0.2`
 **Normative domain:** validation pipeline, result statuses, exit codes, and conforming-implementation obligations
 
 ## Pipeline

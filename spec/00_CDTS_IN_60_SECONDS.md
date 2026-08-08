@@ -1,7 +1,7 @@
 # CDTS in 60 Seconds
 
-**Artifact version:** `0.2-draft`
-**Record profile:** `0.1-draft`
+**Artifact version:** `0.2`
+**Record profile:** `0.1`
 **Mode:** non-normative quick guide
 
 A CDTS record correlates qualified references around one bounded trace scope. It does not declare that the references describe one real-world event.
