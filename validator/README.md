@@ -1,6 +1,6 @@
 # CDTS Reference Validator
 
-The validator implements record profile `0.1-draft` for artifact version `0.2-draft`.
+The validator implements record profile `0.1` for artifact version `0.2`.
 
 It uses only the Python standard library at runtime.
 
