@@ -35,9 +35,9 @@ class ArtifactCanonTests(unittest.TestCase):
         artifact = self.artifact()
         self.assertEqual(artifact["artifact_id"], "claude.cdts")
         self.assertEqual(artifact["repository"], "gv1983us-commits/cdts")
-        self.assertEqual(artifact["artifact_version"], "0.2-draft")
-        self.assertEqual(artifact["record_profile_version"], "0.1-draft")
-        self.assertEqual(artifact["artifact_status"], "canonical_public_draft")
+        self.assertEqual(artifact["artifact_version"], "0.2")
+        self.assertEqual(artifact["record_profile_version"], "0.1")
+        self.assertEqual(artifact["artifact_status"], "canonical_public")
         self.assertEqual(artifact["license"], "MIT")
 
     def test_five_surface_authority_matrix(self):
@@ -83,7 +83,7 @@ class ArtifactCanonTests(unittest.TestCase):
             schema["$id"],
             "https://raw.githubusercontent.com/gv1983us-commits/cdts/main/schema/cdts-record.schema.json",
         )
-        self.assertEqual(schema["properties"]["cdts_version"]["const"], "0.1-draft")
+        self.assertEqual(schema["properties"]["cdts_version"]["const"], "0.1")
 
 
 if __name__ == "__main__":
