@@ -2,9 +2,9 @@
 
 [![CDTS checks](https://github.com/gv1983us-commits/cdts/actions/workflows/ci.yml/badge.svg)](https://github.com/gv1983us-commits/cdts/actions/workflows/ci.yml)
 
-**Artifact version:** `0.2-draft`
-**Record profile:** `0.1-draft`
-**Canonical status:** `canonical_public_draft`
+**Artifact version:** `0.2`
+**Record profile:** `0.1`
+**Canonical status:** `canonical_public`
 **License:** MIT
 
 CDTS is a portable coordination-layer trace for correlating addressable records owned by independent specifications.
@@ -23,7 +23,7 @@ CDTS does not validate an external record, import a domain verdict, establish ev
 | `spec/02_RELATIONSHIP_VOCABULARY.md` | CDTS relationship, status, and basis meanings |
 | `spec/03_SOURCE_REVISION_POLICY.md` | owner, role, pin, and compatibility-set rules |
 | `spec/04_CONFORMANCE.md` | pipeline, statuses, exit codes, and implementation obligations |
-| `schema/cdts-record.schema.json` | structural representation of record profile `0.1-draft` |
+| `schema/cdts-record.schema.json` | structural representation of record profile `0.1` |
 
 ```text
 normative_surface_count = 5
