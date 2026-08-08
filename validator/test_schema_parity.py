@@ -69,7 +69,7 @@ class SchemaParityTests(unittest.TestCase):
     def test_schema_id_and_version_are_canonical(self):
         self.assertEqual("https://raw.githubusercontent.com/gv1983us-commits/cdts/main/schema/cdts-record.schema.json", self.schema["$id"])
         self.assertEqual("https://json-schema.org/draft/2020-12/schema", self.schema["$schema"])
-        self.assertEqual("0.1-draft", self.schema["properties"]["cdts_version"]["const"])
+        self.assertEqual("0.1", self.schema["properties"]["cdts_version"]["const"])
 
     def test_each_required_root_property_is_enforced(self):
         for name in self.schema["required"]:
