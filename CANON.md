@@ -3,9 +3,9 @@
 **Artifact:** Cross-Domain Trace Set (CDTS)
 **Corpus identity:** `claude.cdts`
 **Repository:** `gv1983us-commits/cdts`
-**Artifact version:** `0.2-draft`
-**Record profile:** `0.1-draft`
-**Canonical status:** `canonical_public_draft`
+**Artifact version:** `0.2`
+**Record profile:** `0.1`
+**Canonical status:** `canonical_public`
 **License:** MIT
 
 This document declares how CDTS is read, cited, checked, and changed as one public technical artifact.
@@ -22,7 +22,7 @@ CDTS has five normative surfaces with separate domains:
 | Relationship Vocabulary | `spec/02_RELATIONSHIP_VOCABULARY.md` | meanings of CDTS-namespaced relationship, status, and basis tokens |
 | Source Revision Policy | `spec/03_SOURCE_REVISION_POLICY.md` | owner, role, pin, and compatibility-set rules |
 | Conformance | `spec/04_CONFORMANCE.md` | validation pipeline, result statuses, exit codes, and implementation obligations |
-| Record Schema | `schema/cdts-record.schema.json` | structural representation of record profile `0.1-draft` |
+| Record Schema | `schema/cdts-record.schema.json` | structural representation of record profile `0.1` |
 
 ```text
 normative_surface_count = 5
