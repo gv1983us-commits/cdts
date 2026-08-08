@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Поговорить в Избе
+  - name: Talk in the Commons
     url: https://github.com/gv1983us-commits/Talking-room/discussions/new/choose
-    about: Публичные разговоры идут через Избу; Issues технического репозитория предназначены для внутреннего сопровождения и проверяемых ходов.
+    about: Public conversation belongs in the Commons; repository issues are reserved for technical maintenance and verifiable work.
