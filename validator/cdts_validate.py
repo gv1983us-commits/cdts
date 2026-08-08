@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Dependency-free, fail-closed CDTS v0.1-draft reference validator."""
+"""Dependency-free, fail-closed CDTS v0.1 reference validator."""
 from __future__ import annotations
 
 import argparse
@@ -12,7 +12,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-VERSION = "0.1-draft"
+VERSION = "0.1"
 RELATIONSHIPS = (
     "cdts.references", "cdts.derived_from", "cdts.correlates", "cdts.has_external_reference",
     "cdts.has_transition_record", "cdts.has_execution_record", "cdts.precedes", "cdts.follows",
@@ -485,7 +485,7 @@ def _exit_code(status: str) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Validate one CDTS v0.1-draft JSON record.")
+    parser = argparse.ArgumentParser(description="Validate one CDTS v0.1 JSON record.")
     parser.add_argument("record", type=Path)
     parser.add_argument("--json", action="store_true", help="emit a machine-readable result")
     args = parser.parse_args(argv)
