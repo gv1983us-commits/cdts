@@ -1,6 +1,6 @@
 # CDTS Conformance Corpus
 
-This directory provides executable evidence for record profile `0.1-draft` under artifact version `0.2-draft`.
+This directory provides executable evidence for record profile `0.1` under artifact version `0.2`.
 
 - `fixtures/valid-*.json` must produce an admissible or qualified-admissible result.
 - `fixtures/invalid-*.json` must produce `INVALID`.
