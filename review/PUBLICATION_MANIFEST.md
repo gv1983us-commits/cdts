@@ -1,8 +1,8 @@
 # CDTS Publication Manifest
 
-**Candidate:** CDTS artifact `0.2-draft`
-**Record profile:** `0.1-draft`
-**Status:** `canonical_public_draft`
+**Candidate:** CDTS artifact `0.2`
+**Record profile:** `0.1`
+**Status:** `canonical_public`
 **Prepared:** 2026-08-06
 **Normative surfaces:** 5
 
@@ -53,5 +53,9 @@ ARB             bcf9f628ee1d7c2075673b00f660674680bb6f62
 - public files contain no local path, private share link, or credential marker;
 - GitHub Actions are pinned and pass on Python 3.10 through 3.13;
 - MIT remains tied to `LICENSE`.
+
+## Stabilization pass (2026-08-08)
+
+`0.2-draft` -> `0.2` and `0.1-draft` -> `0.1` across the schema const, `ARTIFACT.json`, every fixture and example, the validator, all spec documents, and every human-readable surface, in one atomic pass so the schema const and every record's `cdts_version` field stay in agreement. `canonical_public_draft` -> `canonical_public`.
 
 Passing publication gates does not establish external authenticity, completeness, identity, causality, neighboring conformance, or world truth.
