@@ -1,7 +1,7 @@
 # CDTS Compatibility Receipt - Accepted Neighbor Revisions
 
-**Artifact version:** `0.2-draft`
-**Record profile:** `0.1-draft`
+**Artifact version:** `0.2`
+**Record profile:** `0.1`
 **Review date:** 2026-08-06
 **Receipt role:** exact fixed-source compatibility evidence; not a sixth normative surface
 
