@@ -1,4 +1,4 @@
-"""Behavior tests for the corrected CDTS v0.1-draft boundary.
+"""Behavior tests for the corrected CDTS v0.1 boundary.
 
 These tests implement review/ARCHITECTURAL_CORRECTION_GATE.md. They supersede
 proposal-level assumptions from the original handoff.
@@ -49,7 +49,7 @@ def record_ref(ref_id: str, owner: str, record_type: str, record_id: str, minute
 
 def base_trace() -> dict:
     return {
-        "cdts_version": "0.1-draft",
+        "cdts_version": "0.1",
         "trace_id": "cdts-test-001",
         "trace_revision": 1,
         "trace_scope": {
@@ -105,7 +105,7 @@ class StrictParsingTests(unittest.TestCase):
 
     def test_duplicate_keys_are_rejected(self):
         with self.assertRaises(ParseFailure):
-            validate_file(self._write(b'{"cdts_version":"0.1-draft","cdts_version":"0.1-draft"}'))
+            validate_file(self._write(b'{"cdts_version":"0.1","cdts_version":"0.1"}'))
 
     def test_nonfinite_numbers_are_rejected(self):
         for token in (b"NaN", b"Infinity", b"-Infinity"):
