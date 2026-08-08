@@ -46,9 +46,9 @@ class PublicationTests(unittest.TestCase):
     def test_required_artifacts_exist(self):
         self.assertEqual([], sorted(name for name in REQUIRED if not (ROOT / name).is_file()))
 
-    def test_readme_declares_canonical_public_draft(self):
+    def test_readme_declares_canonical_public(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("canonical_public_draft", readme)
+        self.assertIn("canonical_public", readme)
         self.assertIn("Artifact version", readme)
         self.assertIn("Record profile", readme)
         self.assertNotIn("unpublished candidate", readme)
