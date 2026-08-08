@@ -31,11 +31,15 @@ Canonization adds the artifact envelope, declares the five-surface authority mat
 ## 4. Version separation
 
 ```text
-artifact version:       0.2-draft
-record profile version: 0.1-draft
+artifact version:       0.2
+record profile version: 0.1
 ```
 
-The artifact version changed because canon, provenance, relation, and compatibility surfaces changed. The record profile version did not change because the JSON record contract and token vocabulary remain profile v0.1-draft.
+The artifact version changed because canon, provenance, relation, and compatibility surfaces changed. The record profile version did not change because the JSON record contract and token vocabulary remain profile v0.1.
+
+### Stabilization pass (2026-08-08)
+
+The `-draft` suffix was dropped from both version identifiers (`0.2-draft` -> `0.2`, `0.1-draft` -> `0.1`) across the schema const, all fixtures, examples, the validator, and every human-readable surface in one atomic pass. This records that the artifact envelope and record profile are no longer moving drafts; it does not change the record profile's semantics, and it does not imply a major-version architectural change.
 
 ## 5. Human and tool participation
 
